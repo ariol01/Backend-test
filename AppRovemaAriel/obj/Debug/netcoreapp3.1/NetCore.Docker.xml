@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetCore.Docker</name>
+    </assembly>
+    <members>
+        <member name="M:AppRovemaAriel.Controllers.CategoryController.Get(AppRovemaAriel.Data.DataContext)">
+            <summary>
+            lista as categorias  da To-do list.
+            </summary>
+            <param name="context"></param>
+            <returns>As Categorias da to-do list</returns>
+            <response code="200">Returna as categorias da To-do list cadastrados</response>
+            <response code="200">Returna um  produto com varias categorias </response>
+            <response code="400">Caso o post falhe</response> 
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.CategoryController.Post(AppRovemaAriel.Data.DataContext,AppRovemaAriel.Models.Category)">
+            <summary>
+            cria uma categoria To-do list.
+            </summary>
+            <remarks> 
+            Exemplo:
+                {
+                     
+             "descricao": "Frios e Gelados"
+                }
+            </remarks>
+            <param name="context"></param>
+            <param name="model"></param>
+            <returns>Uma nova catgoria criado</returns>
+            <response code="200">Returna uma categoria cadastrada </response>
+            <response code="400">Caso o post falhe</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.CategoryController.Edit(AppRovemaAriel.Data.DataContext,System.Int32,System.String)">
+            <summary>
+            Edita uma categoria na To-do List.
+            </summary>
+            <remarks>         
+               "nova descricao do categoria"       
+             
+            </remarks>
+            <param name="context"></param>
+            <param name="Id">informa o id da categoria </param>
+            <param name="descricao">nova descricao da categoria</param>
+            <returns>A categoria que foi alterado</returns>
+             <response code="200">Returna uma categoria alterada </response>
+            <response code="400">Caso a alteracao falhe</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.CategoryController.Delete(AppRovemaAriel.Data.DataContext,System.Int32)">
+            <summary>
+            remove uma catgoria na To-do list.
+            </summary>
+            <param name="context"></param>
+            <param name="Id">informe o id  da categoria</param>
+            <returns> A Categoria removida</returns>
+             <response code="200">Returna a categoria  removida </response>
+            <response code="400">Caso a remocao falhe</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductCategoryController.AddProductCategories(AppRovemaAriel.Data.DataContext,System.Int32,System.Int32[])">
+            <summary>
+            cria varias categorias ao produto To-do list.
+            </summary>
+            <param name="context"></param>
+            <param name="productId">Id do produto</param>
+            <param name="ListCategoryProduct">informe o id de cada categoria</param>
+            <remarks>
+            Exemplo:
+             [ 1,2,3,4,5 ]
+            </remarks>
+            <returns>Produto com várias categorias</returns>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductController.Get(AppRovemaAriel.Data.DataContext)">
+            <summary>
+            lista os produtos  da To-do list.
+            </summary>
+            <param name="context"></param>
+            <returns>Os itens da to-do list</returns>
+            <response code="200">Returna os produtos da To-do list cadastrados</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductController.GetById(AppRovemaAriel.Data.DataContext,System.Int32)">
+            <summary>
+            lista um produto na To-do List. 
+            </summary>
+            <param name="context"></param>
+            <param name="Id">informe o id do produto</param>
+            <returns>um produto cadastrado</returns>
+            <response code="200">Returna um  produto  pelo id informado</response>
+            <response code="400">Se o item não for encontrado</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductController.Post(AppRovemaAriel.Data.DataContext,AppRovemaAriel.Models.Product)">
+            <summary>
+            cria um produtona To-do list.
+            </summary>
+            <remarks> 
+            Exemplo:
+                {
+            
+             "name": "canetea azul",
+            "preco": 1870.50
+                }
+            </remarks>
+            <param name="context"></param>
+            <param name="model"></param>
+            <returns>Um novo produto criado</returns>
+            <response code="200">Returna um  produto cadastrado </response>
+            <response code="400">Caso o post falhe</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductController.Delete(AppRovemaAriel.Data.DataContext,System.Int32)">
+            <summary>
+            remove um produto na To-do list.
+            </summary>
+            <param name="context"></param>
+            <param name="Id">informe o id  do produto</param>
+            <returns>O  produto que acabou de ser deletado</returns>
+             <response code="200">Returna o produto que acabou de ser removido </response>
+            <response code="400">Caso a removacao falhe</response>
+        </member>
+        <member name="M:AppRovemaAriel.Controllers.ProductController.Edit(AppRovemaAriel.Data.DataContext,System.Int32,System.String)">
+            <summary>
+            Edita um produto na To-do List.
+            </summary>
+            <remarks>         
+               "minha nova descricao do produto"       
+             
+            </remarks>
+            <param name="context"></param>
+            <param name="Id">informa o id do produto </param>
+            <param name="descricao">nova descricao do produto</param>
+            <returns>O produto que foi alterado</returns>
+             <response code="200">Returna um  produto alterado </response>
+            <response code="400">Caso a alteracao falhe</response>
+        </member>
+    </members>
+</doc>
